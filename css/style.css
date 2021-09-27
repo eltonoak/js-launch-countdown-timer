@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(235, 16%, 14%);
+  color: hsl(0, 0%, 100%);
+  font-family: "Red Hat Text", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: grid;
+  grid-template-rows: 1fr 2.5rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+main {
+  width: 90%;
+  height: 100%;
+  background: url("../images/bg-stars.svg");
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  padding: 5rem 0;
+  padding-bottom: 2.5rem;
+}
+.counter {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(10rem, 1fr);
+  gap: 1rem;
+  align-items: center;
+  color: hsl(237, 18%, 59%);
+  font-size: 1.2rem;
+  padding: 5rem 0;
+}
+.square {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.square > div {
+  width: 100%;
+  height: 90%;
+  background-color: hsl(236, 21%, 26%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.7rem;
+  margin-bottom: 1.5rem;
+}
+.square span {
+  color: hsl(345, 95%, 68%);
+  font-size: 2em;
+}
+.square::before {
+  content: "";
+  width: 100%;
+  height: 49%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(235, 16%, 14%, 0.3);
+}
+.icons {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  padding: 5rem 0;
+  z-index: 2;
+}
+.icons div {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.icons img:hover {
+  filter: brightness(68%) sepia(0.5) hue-rotate(345deg) saturate(95);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  z-index: 2;
+}
+
+.attribution a {
+  color: hsl(345, 95%, 68%);
+}
+body::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: url("../images/pattern-hills.svg");
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+  }
+  .counter {
+    gap: 3rem;
+  }
+  .square {
+    height: 15rem;
+  }
+  .square > div {
+    font-size: 4rem;
+  }
+  .icons div {
+    width: 20%;
+  }
+}
